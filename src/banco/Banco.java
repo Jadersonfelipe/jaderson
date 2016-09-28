@@ -11,14 +11,15 @@ public class Banco {
       Conta cc = new ContaCorrente();
       Conta cp =  new ContaPoupanca();
       
-      c.depositar(100);
       c.Taxa(10);
-      
-      cc.depositar(100);
+      c.depositar(100);
+     
       cc.Taxa(10);
+      cc.depositar(100);
       
-      cp.depositar(100);
       cp.Taxa(10);
+      cp.depositar(100);
+      
       
       
         System.out.println(c.getSaldo());
@@ -27,7 +28,7 @@ public class Banco {
         
         System.out.println(cp.getSaldo());
         
-        System.out.println(c.getTaxa());
+        System.out.println(cp.getTaxa());
     }
     
 }

@@ -4,16 +4,15 @@ package banco;
 public class ContaCorrente extends Conta{
     
   
-    public float Taxa(float perc){
+    public void Taxa(float perc){
         
-       this.taxa=(((perc/100)*2)*saldo);
-        
-         return taxa;
+       this.taxa=perc*2;
+       
     }
     
       
     public double depositar(double grana){
-        this.saldo+=(grana-0.10-this.taxa);
+        this.saldo+=grana-(0.10)-((taxa/100)*grana);
         
         return saldo;
     }

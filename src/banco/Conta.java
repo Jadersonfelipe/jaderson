@@ -11,29 +11,19 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public float getSaldo() {
-        return saldo;
-    }
-   
-      protected float Taxa(float perc){
+      protected void Taxa(float perc){
         
-        this.taxa=((perc/100)*saldo);
-        
-         return taxa;
-      }
+        this.taxa=(perc);
+        }
       
-    public double depositar(double grana){
-        this.saldo+=(grana-taxa);
-        
-        return saldo;
+    public void depositar(float grana){
+        this.saldo =grana-((this.taxa/100)*grana);
+      
     }
     
-    public double sacar(double grana){
+    public void sacar(double grana){
         this.saldo-=grana;
-        
-        return saldo;
-        
-    }
+   }
 
     public float getTaxa() {
         return taxa;
@@ -43,7 +33,9 @@ public class Conta {
         this.taxa = taxa;
     }
   
-                
+        public float getSaldo() {
+        return saldo;
+    }         
     }
    
 
